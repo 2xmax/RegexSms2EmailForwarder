@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/filter">
+        <ListPreference android:key="filter_type"
+                        android:title="@string/filter_type"
+                        android:entries="@array/filter_types"
+                        android:entryValues="@array/filter_conditions_values"
+                        android:defaultValue="@string/filter_type_default"/>
+
+        <EditTextPreference android:key="filter_phone"
+                            android:title="@string/regex_phone"
+                            android:dialogTitle="@string/regex_phone"
+                            android:defaultValue="@string/regex_phone_default"/>
+
+        <EditTextPreference android:key="filter_text"
+                            android:title="@string/regex_body"
+                            android:dialogTitle="@string/regex_body"
+                            android:defaultValue="@string/regex_body_default"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/email_category">
+        <EditTextPreference android:key="email_to"
+                            android:title="@string/email_to"
+                            android:dialogTitle="@string/email_to"/>
+
+        <EditTextPreference android:key="smtp_username"
+                            android:title="@string/email_username"
+                            android:dialogTitle="@string/email_username"/>
+
+        <EditTextPreference android:key="smtp_password" android:title="@string/email_password"
+                            android:dialogTitle="@string/email_password"
+                            android:password="true"/>
+
+        <EditTextPreference android:key="smtp_server"
+                            android:title="@string/email_server"
+                            android:dialogTitle="@string/email_server"
+                            android:defaultValue="@string/email_server_default"/>
+
+        <EditTextPreference android:key="smtp_port"
+                            android:title="@string/email_port"
+                            android:dialogTitle="@string/email_port"
+                            android:defaultValue="@string/email_port_default"/>
+
+        <CheckBoxPreference android:key="smtp_ssl"
+                            android:title="@string/email_ssl"
+                            android:defaultValue="@string/email_ssl_default"/>
+    </PreferenceCategory>
+</PreferenceScreen>

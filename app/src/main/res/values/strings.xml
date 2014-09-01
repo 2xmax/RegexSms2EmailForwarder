@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SMS2Email</string>
+    <string name="email_category">Email settings</string>
+    <string name="email_to">To</string>
+    <string name="email_username">Username</string>
+    <string name="email_password">Password</string>
+    <string name="email_server">SMTP server</string>
+    <string name="email_server_default">smtp-mail.outlook.com</string>
+    <string name="email_port">Port</string>
+    <string name="email_port_default">587</string>
+    <string name="email_ssl">SSL</string>
+    <string name="email_ssl_default">true</string>
+    <string name="regex_phone">Phone filter</string>
+    <string name="regex_phone_default">.*</string>
+    <string name="regex_body">Text filter</string>
+    <string name="regex_body_default">.*</string>
+    <string name="filter">Message filter</string>
+    <string name="filter_type">Forward if</string>
+    <string name="filter_type_default">or</string>
+    <string-array name="filter_types">
+        <item>Forward if all conditions are satisfied</item>
+        <item>Forward if any condition is satisfied</item>
+    </string-array>
+    <string-array name="filter_conditions_values">
+        <item>true</item>
+        <item>false</item>
+    </string-array>
+    <string name="email_sender">SMSALERT</string>
+    <string name="email_subject">[SMSALERT]: MessageReceived</string>
+    <string name="email_body">
+        PHONE:{phone}
+        TEXT:{text}</string>
+    <string name="preferences">Preferences</string>
+</resources>
