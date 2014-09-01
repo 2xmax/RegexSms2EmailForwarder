@@ -14,6 +14,11 @@ public class MessageFilterTest {
     private Tuple<MessageFilter, Message> input;
     private boolean expected;
 
+    public MessageFilterTest(Tuple<MessageFilter, Message> input, boolean expected) {
+        this.input = input;
+        this.expected = expected;
+    }
+
     @Parameterized.Parameters
     public static Collection getTestCases() {
         return Arrays.asList(new Object[][]{
@@ -47,11 +52,6 @@ public class MessageFilterTest {
         });
     }
 
-    public MessageFilterTest(Tuple<MessageFilter, Message> input, boolean expected) {
-        this.input = input;
-        this.expected = expected;
-    }
-
     @Test
     public void testMatches() throws Exception {
         assertEquals(input.first.matches(input.second), expected);
@@ -60,6 +60,7 @@ public class MessageFilterTest {
     private static class Tuple<X, Y> {
         public final X first;
         public final Y second;
+
         public Tuple(X first, Y second) {
             this.first = first;
             this.second = second;

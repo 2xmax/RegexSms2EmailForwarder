@@ -9,7 +9,7 @@ buildscript {
 apply plugin: 'android'
 
 repositories {
-        mavenCentral()
+    mavenCentral()
 }
 
 android {
@@ -58,7 +58,7 @@ dependencies {
     configurations.unitTestCompile.exclude group: 'com.google.android.maps'
 }
 
-task unitTest(type:Test, dependsOn: assemble) {
+task unitTest(type: Test, dependsOn: assemble) {
     description = "run unit tests"
     testClassesDir = project.sourceSets.unitTest.output.classesDir
     classpath = project.sourceSets.unitTest.runtimeClasspath

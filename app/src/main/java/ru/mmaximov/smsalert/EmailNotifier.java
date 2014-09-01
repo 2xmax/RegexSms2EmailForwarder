@@ -23,6 +23,10 @@ class EmailNotifier {
         this.ctx = ctx;
     }
 
+    private static String substituteTemplate(String template, Message msg) {
+        return template.replace("{phone}", msg.getPhone()).replace("{text}", msg.getText());
+    }
+
     public void notify(Message msg) {
         Resources resources = ctx.getResources();
         sendEmail(substituteTemplate(resources.getString(R.string.email_sender), msg),
@@ -62,9 +66,5 @@ class EmailNotifier {
         } catch (Exception e) {
             Log.e("email sender", e.toString());
         }
-    }
-
-    private static String substituteTemplate(String template, Message msg) {
-        return template.replace("{phone}", msg.getPhone()).replace("{text}", msg.getText());
     }
 }

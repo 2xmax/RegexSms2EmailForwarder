@@ -30,6 +30,7 @@
     <string name="email_subject">[SMSALERT]: MessageReceived</string>
     <string name="email_body">
         PHONE:{phone}
-        TEXT:{text}</string>
+        TEXT:{text}
+    </string>
     <string name="preferences">Preferences</string>
 </resources>
